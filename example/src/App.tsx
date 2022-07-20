@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useSearch } from "react-easy-search";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dummy1 = {
+    topic: "Lorem excepteur sunt sunt dolor.",
+    tagline: "Incididunt adipisicing cillum tempor elit excepteur cillum.",
+    subtopics: [
+      {
+        subtopic:
+          "Anim sint ut eiusmod consectetur deserunt enim irure ullamco Lorem mollit Lorem.",
+        description:
+          "Ea non Lorem commodo sint sit. Ipsum id amet ad labore laborum sit anim aute ipsum dolore. Commodo anim occaecat voluptate Lorem minim est amet anim veniam. Nisi aliquip esse laboris minim cupidatat quis.",
+      },
+      {
+        subtopic:
+          "Fugiat aliqua duis adipisicing id velit ipsum incididunt proident.",
+        description:
+          "Est duis consectetur consectetur proident incididunt veniam adipisicing commodo. Proident nulla laborum consequat enim et qui id aliqua Lorem in eiusmod non ut cupidatat. Nisi ipsum deserunt mollit mollit nulla mollit Lorem irure. Veniam sit sunt ex duis voluptate ea aliquip aliqua cillum enim. Consectetur ullamco cillum quis veniam minim est elit.",
+      },
+    ],
+  };
+
+  const dummy2 = ["Hi", "Hello", 1, 2, 34];
+
+  useSearch(dummy1);
+  useSearch(dummy2);
+
+  return <div className="App"></div>;
 }
 
 export default App;

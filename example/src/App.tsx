@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSearch } from "react-easy-search";
 
 function App() {
@@ -20,12 +21,30 @@ function App() {
     ],
   };
 
-  const dummy2 = ["Hi", "Hello", 1, 2, 34];
+  const dummy2 = [1, 2];
 
-  useSearch(dummy1);
-  useSearch(dummy2);
+  const [input, setInput] = useState<string>("proident");
 
-  return <div className="App"></div>;
+  const { results } = useSearch(dummy1, input);
+
+  console.log(results, input);
+
+  // useSearch(dummy2);
+
+  return (
+    <div className="App">
+      <input
+        type="text"
+        value={input}
+        onChange={({ target: { value } }) => {
+          setInput(value);
+        }}
+      />
+      {results.map((r) => (
+        <p>{r}</p>
+      ))}
+    </div>
+  );
 }
 
 export default App;

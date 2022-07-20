@@ -1,0 +1,53 @@
+{
+  "name": "react-easy-search",
+  "version": "0.0.1",
+  "homepage": "https://jagnani73.github.io/react-easy-search",
+  "description": "TBD",
+  "author": {
+    "name": "Yashvardhan Jagnani",
+    "email": "yashjagnani73@gmail.com",
+    "url": "https://jagnani.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagnani73/react-easy-search"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "search",
+    "css",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev-example": "cd example/ && yarn start",
+    "dev": "rollup -c -w",
+    "build-example": "cd example/ && yarn build"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/runtime": "^7.14.5",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@types/react": "^17.0.9",
+    "rollup": "^2.51.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "dist"
+  ]
+}

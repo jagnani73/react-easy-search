@@ -8,7 +8,7 @@
     "@types/react-dom": "^18.0.0",
     "react": "link:../mode_modules/react",
     "react-dom": "^18.2.0",
-    "react-easy-dearch": "link:..",
+    "react-easy-search": "link:..",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
